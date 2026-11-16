@@ -1,57 +1,52 @@
-<h2>👤</h2>
-<h3>My Profile</h3>
-<p>Account information</p>
-<button onclick="alert('Profile coming soon!')">Profile</button>
-</div>
-</div>
-<div class="action">
-<h3>💳 Withdraw</h3>
-<p>Withdrawal feature is not active yet.</p>
-<button onclick="alert('Withdrawal is not available in this demo.')">Withdraw Now</button>
-</div>
-<div class="action">
-<h3>🔐 User Login</h3>
-<input id="loginEmail" type="email" placeholder="Enter your email">
-<input id="loginPassword" type="password" placeholder="Enter password">
-<button onclick="login()">Login</button>
-</div>
-<div class="action">
-<h3>📝 Create Account</h3>
-<input id="regName" type="text" placeholder="Your Name">
-<input id="regEmail" type="email" placeholder="Your Email">
-<input id="regPassword" type="password" placeholder="Create Password">
-<button onclick="register()">Register</button>
-</div>
-</div>
-<footer>
-© 2026 NewtechnologyEarnBD
-<br>All Rights Reserved
-</footer>
-<script>
-function register(){
-let name=document.getElementById("regName").value;
-let email=document.getElementById("regEmail").value;
-let password=document.getElementById("regPassword").value;
-if(!name || !email || !password){
-alert("Please fill all fields");
-return;
-}
-localStorage.setItem("demoUser",JSON.stringify({
-name:name,email:email,password:password
-}));
-alert("Demo account created!");
-}
-function login(){
-let email=document.getElementById("loginEmail").value;
-let password=document.getElementById("loginPassword").value;
-let user=JSON.parse(localStorage.getItem("demoUser") || "null");
-if(user && user.email===email && user.password===password){
-alert("Welcome "+user.name+"!");
-}else{
-alert("Account not found. Please register first.");
-}
-}
-</script>
-<p>Your Demo Account</p>
-</body>
+</div>  
+<div class="action">  
+<h3>💳 Withdraw</h3>  
+<p>Withdrawal feature is not active yet.</p>  
+<button onclick="alert('Withdrawal is not available in this demo.')">Withdraw Now</button>  
+</div>  
+<div class="action">  
+<h3>🔐 User Login</h3>  
+<input id="loginEmail" type="email" placeholder="Enter your email">  
+<input id="loginPassword" type="password" placeholder="Enter password">  
+<button onclick="login()">Login</button>  
+</div>  
+<div class="action">  
+<h3>📝 Create Account</h3>  
+<input id="regName" type="text" placeholder="Your Name">  
+<input id="regEmail" type="email" placeholder="Your Email">  
+<input id="regPassword" type="password" placeholder="Create Password">  
+<button onclick="register()">Register</button>  
+</div>  
+</div>  
+<footer>  
+© 2026 NewtechnologyEarnBD  
+<br>All Rights Reserved  
+</footer>  
+<script>  
+function register(){  
+let name=document.getElementById("regName").value;  
+let email=document.getElementById("regEmail").value;  
+let password=document.getElementById("regPassword").value;  
+if(!name || !email || !password){  
+alert("Please fill all fields");  
+return;  
+}  
+localStorage.setItem("demoUser",JSON.stringify({  
+name:name,email:email,password:password  
+}));  
+alert("Demo account created!");  
+}  
+function login(){  
+let email=document.getElementById("loginEmail").value;  
+let password=document.getElementById("loginPassword").value;  
+let user=JSON.parse(localStorage.getItem("demoUser") || "null");  
+if(user && user.email===email && user.password===password){  
+alert("Welcome "+user.name+"!");  
+}else{  
+alert("Account not found. Please register first.");  
+}  
+}  
+</script>  
+<p>Your Demo Account</p>  
+</body>  
 </html>
