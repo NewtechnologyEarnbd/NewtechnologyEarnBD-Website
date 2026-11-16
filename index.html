@@ -1,134 +1,20 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NewtechnologyEarnBD</title>
-<style>
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f1f5f9;
-color:#172554;
-}
-header{
-background:#075985;
-color:white;
-text-align:center;
-padding:25px 10px;
-}
-header h1{margin:0;font-size:25px}
-header p{margin:8px 0 0}
-.container{padding:15px}
-.balance{
-background:linear-gradient(120deg,#0284c7,#0f766e);
-color:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-}
-.balance h2{margin:0;font-size:17px}
-.balance h1{font-size:32px;margin:12px}
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:18px;
-}
-.card,.action{
-background:white;
-padding:20px 10px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 2px 8px #0001;
-margin-top:15px;
-}
-.card h3{margin:8px 0}
-.card p,.action p{color:#64748b;font-size:13px}
-button{
-background:#0284c7;
-color:white;
-border:0;
-border-radius:8px;
-padding:12px 20px;
-font-size:15px;
-}
-.action button{width:100%;margin-top:8px}
-input{
-width:100%;
-padding:12px;
-margin:8px 0;
-border:1px solid #ccc;
-border-radius:8px;
-}
-footer{
-text-align:center;
-padding:20px;
-color:#64748b;
-font-size:13px;
-}
-</style>
-</head>
-<body>
-
-<header>
-<h1>NewtechnologyEarnBD</h1>
-<p>Welcome to Our Online Platform</p>
-</header>
-
-<div class="container">
-
-<div class="balance">
-<h2>My Total Balance</h2>
-<h1>৳ 0.00</h1>
-<p>Your Demo Account</p>
-</div>
-
-<div class="grid">
-<div class="card">
-<h2>💰</h2>
-<h3>Daily Task</h3>
-<p>Complete daily tasks</p>
-<button onclick="alert('Daily tasks coming soon!')">Start</button>
-</div>
-
-<div class="card">
-<h2>👥</h2>
-<h3>Refer Friends</h3>
-<p>Invite your friends</p>
-<button onclick="alert('Referral feature coming soon!')">Invite</button>
-</div>
-
-<div class="card">
-<h2>📊</h2>
-<h3>My Earnings</h3>
-<p>View your earnings</p>
-<button onclick="alert('No earnings yet!')">View</button>
-</div>
-
-<div class="card">
 <h2>👤</h2>
 <h3>My Profile</h3>
 <p>Account information</p>
 <button onclick="alert('Profile coming soon!')">Profile</button>
 </div>
 </div>
-
 <div class="action">
 <h3>💳 Withdraw</h3>
 <p>Withdrawal feature is not active yet.</p>
 <button onclick="alert('Withdrawal is not available in this demo.')">Withdraw Now</button>
 </div>
-
 <div class="action">
 <h3>🔐 User Login</h3>
 <input id="loginEmail" type="email" placeholder="Enter your email">
 <input id="loginPassword" type="password" placeholder="Enter password">
 <button onclick="login()">Login</button>
 </div>
-
 <div class="action">
 <h3>📝 Create Account</h3>
 <input id="regName" type="text" placeholder="Your Name">
@@ -136,37 +22,29 @@ font-size:13px;
 <input id="regPassword" type="password" placeholder="Create Password">
 <button onclick="register()">Register</button>
 </div>
-
 </div>
-
 <footer>
 © 2026 NewtechnologyEarnBD
 <br>All Rights Reserved
 </footer>
-
 <script>
 function register(){
 let name=document.getElementById("regName").value;
 let email=document.getElementById("regEmail").value;
 let password=document.getElementById("regPassword").value;
-
 if(!name || !email || !password){
 alert("Please fill all fields");
 return;
 }
-
 localStorage.setItem("demoUser",JSON.stringify({
 name:name,email:email,password:password
 }));
-
 alert("Demo account created!");
 }
-
 function login(){
 let email=document.getElementById("loginEmail").value;
 let password=document.getElementById("loginPassword").value;
 let user=JSON.parse(localStorage.getItem("demoUser") || "null");
-
 if(user && user.email===email && user.password===password){
 alert("Welcome "+user.name+"!");
 }else{
@@ -174,6 +52,6 @@ alert("Account not found. Please register first.");
 }
 }
 </script>
-
+<p>Your Demo Account</p>
 </body>
 </html>
